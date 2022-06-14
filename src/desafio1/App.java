@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args){
 
-        Scanner sc = new Scanner(System.in);
-        double salario =
+
         Colaborador colaborador = new Colaborador(1000);
 
 
@@ -21,6 +20,8 @@ public class App {
         }
 
         System.out.println(colaborador.getReajuste());
+
+        System.out.println(colaborador);
 
     }
 }
