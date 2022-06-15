@@ -16,6 +16,9 @@ import javax.swing.*;
 
 public class Notas {
     public static void main(String[] args){
+
+        boolean fechar = false;
+        do{
         int op = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção desejada:  \n 1-Média aritmética " +
                 "\n 2-Média Ponterada \n3-Sair "));
 
@@ -25,7 +28,7 @@ public class Notas {
             double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Insira a Nota 2:"));
             double mediaAritmetica = (nota1+nota2)/2;
 
-            System.out.println("A média das notas é: " + mediaAritmetica);
+            JOptionPane.showMessageDialog(null, "A média das notas é: " + mediaAritmetica);
 
         }else if(op==2){
             double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Insira a Nota 1:"));
@@ -35,15 +38,19 @@ public class Notas {
             double nota3 = Double.parseDouble(JOptionPane.showInputDialog("Insira a Nota 3:"));
             double peso3 = Double.parseDouble(JOptionPane.showInputDialog("Insira o peso da nota 3:"));
 
-            System.out.println((peso1*nota1+peso2*nota2+peso3*nota3)/(peso1+peso2+peso3));
+            double mediaPonderada  = (peso1*nota1+peso2*nota2+peso3*nota3)/(peso1+peso2+peso3);
+
+            JOptionPane.showMessageDialog(null,"A média das notas é: " + mediaPonderada);
 
 
         }else if(op==3){
+            fechar = true;
 
 
         }else{
+            JOptionPane.showMessageDialog(null, "Opção inválida.");
 
-        }
+        }}while(!fechar);
 
     }
 }

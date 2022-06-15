@@ -1,9 +1,6 @@
 package desafio3;
 
 public class Pessoa {
-    public abstract class Classe {
-
-
         //Atributos
         private int idade;
         private double peso;
@@ -11,14 +8,14 @@ public class Pessoa {
 
         //Construtor
 
-        Classe(int idade,double peso, double altura){
+        public Pessoa(int idade, double peso, double altura){
+            super();
             this.idade = idade;
             this.peso = peso;
             this.altura = altura;
         }
 
 
-        public abstract double pessoa();
 
 
         //Metodos
@@ -50,4 +47,4 @@ public class Pessoa {
 
 
     }
-}
+
